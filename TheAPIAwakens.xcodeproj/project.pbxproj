@@ -8,20 +8,46 @@
 
 /* Begin PBXBuildFile section */
 		849745BC21B00C1B0076A865 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849745BB21B00C1B0076A865 /* AppDelegate.swift */; };
-		849745BE21B00C1B0076A865 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849745BD21B00C1B0076A865 /* ViewController.swift */; };
+		849745BE21B00C1B0076A865 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849745BD21B00C1B0076A865 /* HomeViewController.swift */; };
 		849745C121B00C1B0076A865 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849745BF21B00C1B0076A865 /* Main.storyboard */; };
 		849745C321B00C1C0076A865 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849745C221B00C1C0076A865 /* Assets.xcassets */; };
 		849745C621B00C1C0076A865 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849745C421B00C1C0076A865 /* LaunchScreen.storyboard */; };
+		849745D021B01A160076A865 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849745CF21B01A160076A865 /* Protocols.swift */; };
+		849745D221B0877D0076A865 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849745D121B0877D0076A865 /* DetailViewController.swift */; };
+		849745D421B089710076A865 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849745D321B089710076A865 /* DetailTableViewController.swift */; };
+		849745D621B08CE10076A865 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849745D521B08CE10076A865 /* Extensions.swift */; };
+		84CF3DEE21B9EB9D00382954 /* Aurebesh.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84CF3DED21B9EB6400382954 /* Aurebesh.ttf */; };
+		84EA500D21B1D66F00361512 /* JSONDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA500C21B1D66F00361512 /* JSONDownloader.swift */; };
+		84EA500F21B1DBA300361512 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA500E21B1DBA300361512 /* DatabaseService.swift */; };
+		84EA501121B1E0BA00361512 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA501021B1E0BA00361512 /* DataModels.swift */; };
+		84EA501321B431C200361512 /* NSNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA501221B431C200361512 /* NSNotifications.swift */; };
+		84EA501521B4F03E00361512 /* OptionPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA501421B4F03D00361512 /* OptionPicker.swift */; };
+		84EA501721B87B1200361512 /* ConversionMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA501621B87B1200361512 /* ConversionMethod.swift */; };
+		8B307119A409831FE066EFFF /* Pods_TheAPIAwakens.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EDA69E5BE1635FC5C0713B /* Pods_TheAPIAwakens.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5EEF073463892FA650D1CC10 /* Pods-TheAPIAwakens.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheAPIAwakens.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheAPIAwakens/Pods-TheAPIAwakens.debug.xcconfig"; sourceTree = "<group>"; };
 		849745B821B00C1B0076A865 /* TheAPIAwakens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheAPIAwakens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849745BB21B00C1B0076A865 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		849745BD21B00C1B0076A865 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		849745BD21B00C1B0076A865 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		849745C021B00C1B0076A865 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		849745C221B00C1C0076A865 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		849745C521B00C1C0076A865 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		849745C721B00C1C0076A865 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		849745CF21B01A160076A865 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		849745D121B0877D0076A865 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		849745D321B089710076A865 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		849745D521B08CE10076A865 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		84CF3DED21B9EB6400382954 /* Aurebesh.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Aurebesh.ttf; sourceTree = "<group>"; };
+		84EA500C21B1D66F00361512 /* JSONDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDownloader.swift; sourceTree = "<group>"; };
+		84EA500E21B1DBA300361512 /* DatabaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		84EA501021B1E0BA00361512 /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
+		84EA501221B431C200361512 /* NSNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNotifications.swift; sourceTree = "<group>"; };
+		84EA501421B4F03D00361512 /* OptionPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionPicker.swift; sourceTree = "<group>"; };
+		84EA501621B87B1200361512 /* ConversionMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionMethod.swift; sourceTree = "<group>"; };
+		A76E1270786BB6B77A6A42DF /* Pods-TheAPIAwakens.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheAPIAwakens.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheAPIAwakens/Pods-TheAPIAwakens.release.xcconfig"; sourceTree = "<group>"; };
+		F1EDA69E5BE1635FC5C0713B /* Pods_TheAPIAwakens.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheAPIAwakens.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +55,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B307119A409831FE066EFFF /* Pods_TheAPIAwakens.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3811F896212000A5CFD77AD6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5EEF073463892FA650D1CC10 /* Pods-TheAPIAwakens.debug.xcconfig */,
+				A76E1270786BB6B77A6A42DF /* Pods-TheAPIAwakens.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		849745AF21B00C1B0076A865 = {
 			isa = PBXGroup;
 			children = (
 				849745BA21B00C1B0076A865 /* TheAPIAwakens */,
 				849745B921B00C1B0076A865 /* Products */,
+				3811F896212000A5CFD77AD6 /* Pods */,
+				B4366EDDF5A616ECBDC8D1EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +92,41 @@
 		849745BA21B00C1B0076A865 /* TheAPIAwakens */ = {
 			isa = PBXGroup;
 			children = (
+				84CF3DEC21B9EB4800382954 /* Fonts */,
 				849745BB21B00C1B0076A865 /* AppDelegate.swift */,
-				849745BD21B00C1B0076A865 /* ViewController.swift */,
+				84EA501221B431C200361512 /* NSNotifications.swift */,
+				849745BD21B00C1B0076A865 /* HomeViewController.swift */,
+				849745D121B0877D0076A865 /* DetailViewController.swift */,
+				849745D321B089710076A865 /* DetailTableViewController.swift */,
+				849745CF21B01A160076A865 /* Protocols.swift */,
 				849745BF21B00C1B0076A865 /* Main.storyboard */,
-				849745C221B00C1C0076A865 /* Assets.xcassets */,
 				849745C421B00C1C0076A865 /* LaunchScreen.storyboard */,
+				849745C221B00C1C0076A865 /* Assets.xcassets */,
+				849745D521B08CE10076A865 /* Extensions.swift */,
 				849745C721B00C1C0076A865 /* Info.plist */,
+				84EA501421B4F03D00361512 /* OptionPicker.swift */,
+				84EA501021B1E0BA00361512 /* DataModels.swift */,
+				84EA500E21B1DBA300361512 /* DatabaseService.swift */,
+				84EA500C21B1D66F00361512 /* JSONDownloader.swift */,
+				84EA501621B87B1200361512 /* ConversionMethod.swift */,
 			);
 			path = TheAPIAwakens;
+			sourceTree = "<group>";
+		};
+		84CF3DEC21B9EB4800382954 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				84CF3DED21B9EB6400382954 /* Aurebesh.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B4366EDDF5A616ECBDC8D1EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1EDA69E5BE1635FC5C0713B /* Pods_TheAPIAwakens.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +136,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 849745CA21B00C1C0076A865 /* Build configuration list for PBXNativeTarget "TheAPIAwakens" */;
 			buildPhases = (
+				2F4F5C82E6C7F9024F849F6F /* [CP] Check Pods Manifest.lock */,
 				849745B421B00C1B0076A865 /* Sources */,
 				849745B521B00C1B0076A865 /* Frameworks */,
 				849745B621B00C1B0076A865 /* Resources */,
+				B50B3077CFD1219A6CB571B0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,18 +192,68 @@
 				849745C621B00C1C0076A865 /* LaunchScreen.storyboard in Resources */,
 				849745C321B00C1C0076A865 /* Assets.xcassets in Resources */,
 				849745C121B00C1B0076A865 /* Main.storyboard in Resources */,
+				84CF3DEE21B9EB9D00382954 /* Aurebesh.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F4F5C82E6C7F9024F849F6F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TheAPIAwakens-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B50B3077CFD1219A6CB571B0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TheAPIAwakens/Pods-TheAPIAwakens-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TheAPIAwakens/Pods-TheAPIAwakens-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		849745B421B00C1B0076A865 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				849745BE21B00C1B0076A865 /* ViewController.swift in Sources */,
+				84EA500F21B1DBA300361512 /* DatabaseService.swift in Sources */,
+				84EA500D21B1D66F00361512 /* JSONDownloader.swift in Sources */,
+				849745D421B089710076A865 /* DetailTableViewController.swift in Sources */,
+				849745BE21B00C1B0076A865 /* HomeViewController.swift in Sources */,
+				849745D221B0877D0076A865 /* DetailViewController.swift in Sources */,
+				84EA501521B4F03E00361512 /* OptionPicker.swift in Sources */,
 				849745BC21B00C1B0076A865 /* AppDelegate.swift in Sources */,
+				84EA501121B1E0BA00361512 /* DataModels.swift in Sources */,
+				84EA501721B87B1200361512 /* ConversionMethod.swift in Sources */,
+				849745D021B01A160076A865 /* Protocols.swift in Sources */,
+				849745D621B08CE10076A865 /* Extensions.swift in Sources */,
+				84EA501321B431C200361512 /* NSNotifications.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +397,7 @@
 		};
 		849745CB21B00C1C0076A865 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EEF073463892FA650D1CC10 /* Pods-TheAPIAwakens.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +416,7 @@
 		};
 		849745CC21B00C1C0076A865 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A76E1270786BB6B77A6A42DF /* Pods-TheAPIAwakens.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

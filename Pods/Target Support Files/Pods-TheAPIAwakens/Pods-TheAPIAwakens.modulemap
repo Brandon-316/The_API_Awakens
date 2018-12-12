@@ -1,0 +1,6 @@
+framework module Pods_TheAPIAwakens {
+  umbrella header "Pods-TheAPIAwakens-umbrella.h"
+
+  export *
+  module * { export * }
+}

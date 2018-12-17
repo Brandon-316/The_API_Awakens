@@ -29,7 +29,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var starshipBtn: SpringButton!
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.activityIndicator.startAnimating()

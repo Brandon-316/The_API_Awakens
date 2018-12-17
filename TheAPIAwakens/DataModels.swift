@@ -23,6 +23,9 @@ class Character: Codable {
     let name: String
     let starships: [String]
     let vehicles: [String]
+    
+    // Uncomment below to test error handling if key is missing
+//    let fakeKey: String
 }
 
 // Planets
@@ -34,6 +37,8 @@ struct Planets: Codable {
 struct Planet: Codable {
     let name: String
     let url: String
+    
+//    let fakeKey: String
 }
 
 
@@ -53,6 +58,8 @@ class Vehicle: Codable {
     let crew: String
     let vehicleClass: String
     let url: String
+    
+//    let fakeKey: String
 }
 
 // Starships
@@ -70,4 +77,13 @@ class Starship: Codable {
     let crew: String
     let starshipClass: String
     let url: String
+    
+//    let fakeKey: String
+}
+
+
+// JSON Error Model
+struct JSONError {
+    let type: StarWarsTypes
+    let errorMessage: String
 }

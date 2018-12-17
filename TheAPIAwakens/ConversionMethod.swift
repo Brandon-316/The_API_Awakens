@@ -31,7 +31,7 @@ class ConversionMethod {
     }
     
     func feet(from meters: String) -> String {
-        guard let metersDouble: Double = Double(meters) else { print("Returned"); return meters }
+        guard let metersDouble: Double = Double(meters) else { return meters }
         let metric = Measurement(value: metersDouble, unit: UnitLength.meters)
         let feet = metric.converted(to: UnitLength.feet)
         let feetDouble = feet.value.rounded()
@@ -47,7 +47,8 @@ class ConversionMethod {
     // Currency conversion
     func dollar(from galactic: String) -> String {
         guard let galacticInt = Int(galactic) else { return galactic }
-        let dollarInt = Int(galacticInt * 24)
+        let currentExchangeRate: Int = UserDefaults.standard.integer(forKey: "exchangeRate")
+        let dollarInt = galacticInt * currentExchangeRate
         
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = NumberFormatter.Style.decimal

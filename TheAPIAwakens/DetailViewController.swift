@@ -22,6 +22,7 @@ class DetailViewController: UIViewController {
     var optionPicker: OptionPicker?
     
 // MARK: Outlets
+    @IBOutlet weak var exchangeRateBtn: UIButton!
     @IBOutlet weak var smallestLabel: UILabel!
     @IBOutlet weak var largestLabel: UILabel!
     @IBOutlet weak var sizesView: UIView!
@@ -46,6 +47,7 @@ class DetailViewController: UIViewController {
         self.setDropshadow()
         self.swipeUpRecognizer.direction = .up
         self.swipeDownRecognizer.direction = .down
+        self.setUpExchangeRateButton()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -55,7 +57,6 @@ class DetailViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detailTableViewSegue" {
             let destinationTableVC = segue.destination as! DetailTableViewController
-            print("selectedType in DetailVC prepareForSegue: \(String(describing: self.selectedType))")
             destinationTableVC.selectedType = self.selectedType
             destinationTableVC.planets = self.planets
             destinationTableVC.vehicles = self.vehicles
@@ -64,22 +65,38 @@ class DetailViewController: UIViewController {
     }
     
 // MARK: Methods
+    func setUpExchangeRateButton() {
+        self.exchangeRateBtn.titleLabel?.textAlignment = .center
+        guard let selectedType = self.selectedType else { return }
+        if selectedType == .characters {
+            self.exchangeRateBtn.isHidden = true
+        }
+    }
+    
     func setUpPickers() {
         // Set up companyPicker
         guard let selectedType = self.selectedType else { return }
-        print("selectedType setUpPickers(): \(selectedType)")
-        switch selectedType {
-            case .characters: self.optionPicker =  OptionPicker(selectedType: self.selectedType!, arrayOfOptions: self.characters)
-                let currentSelected = optionPicker!.characters[pickerView.selectedRow(inComponent: 0)]
-                NotificationCenter.default.post(name: NSNotifications().pickerDidChange, object: currentSelected)
-            case .starships: self.optionPicker =  OptionPicker(selectedType: self.selectedType!, arrayOfOptions: self.starships)
-                let currentSelected = optionPicker!.starships[pickerView.selectedRow(inComponent: 0)]
-                NotificationCenter.default.post(name: NSNotifications().pickerDidChange, object: currentSelected)
-            case .vehicles: self.optionPicker = OptionPicker(selectedType: self.selectedType!, arrayOfOptions: self.vehicles)
-                let currentSelected = optionPicker!.vehicles[pickerView.selectedRow(inComponent: 0)]
-                NotificationCenter.default.post(name: NSNotifications().pickerDidChange, object: currentSelected)
-            default: return
-        }
+            switch selectedType {
+                case .characters:
+                    if characters.count > 0 {
+                        self.optionPicker =  OptionPicker(selectedType: self.selectedType!, arrayOfOptions: self.characters)
+                        let currentSelected = optionPicker!.characters[pickerView.selectedRow(inComponent: 0)]
+                        NotificationCenter.default.post(name: NSNotifications().pickerDidChange, object: currentSelected)
+                    }
+                case .starships:
+                    if starships.count > 0 {
+                            self.optionPicker = OptionPicker(selectedType: self.selectedType!, arrayOfOptions: self.starships)
+                            let currentSelected = optionPicker!.starships[pickerView.selectedRow(inComponent: 0)]
+                            NotificationCenter.default.post(name: NSNotifications().pickerDidChange, object: currentSelected)
+                    }
+                case .vehicles:
+                    if vehicles.count > 0 {
+                        self.optionPicker = OptionPicker(selectedType: self.selectedType!, arrayOfOptions: self.vehicles)
+                        let currentSelected = optionPicker!.vehicles[pickerView.selectedRow(inComponent: 0)]
+                        NotificationCenter.default.post(name: NSNotifications().pickerDidChange, object: currentSelected)
+                    }
+                default: return
+            }
         pickerView.dataSource = self.optionPicker
         pickerView.delegate = self.optionPicker
         
@@ -171,6 +188,10 @@ class DetailViewController: UIViewController {
     
     @IBAction func dismiss(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func changeExchangeRate(_ sender: Any) {
+        
     }
     
     @IBAction func togglePickerView(_ sender: Any) {

@@ -12,7 +12,9 @@ class NSNotifications {
     let jsonCharacterRequestDidComplete = NSNotification.Name(rawValue: "jsonCharacterRequestDidComplete")
     let jsonVehicleRequestDidComplete = NSNotification.Name(rawValue: "jsonVehicleRequestDidComplete")
     let jsonStarshipRequestDidComplete = NSNotification.Name(rawValue: "jsonStarshipRequestDidComplete")
-    let jsonPlanetsRequestDidComplete = NSNotification.Name("jsonPlanetsRequestDidComplete")
+    let jsonPlanetsRequestDidComplete = NSNotification.Name(rawValue: "jsonPlanetsRequestDidComplete")
+    let jsonError = NSNotification.Name(rawValue: "jsonError")
+    let networkError = NSNotification.Name(rawValue: "networkError")
     
     let pickerDidChange = NSNotification.Name(rawValue: "pickerNotificationDidChange")
 }

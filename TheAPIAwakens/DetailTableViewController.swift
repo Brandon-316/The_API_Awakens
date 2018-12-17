@@ -190,7 +190,6 @@ class DetailTableViewController: UITableViewController {
         })
         
         if filteredArray.count == 0 {
-            print("filteredArray return")
             return "unknown"
         }
         
@@ -273,12 +272,10 @@ class DetailTableViewController: UITableViewController {
                 switch selectedType {
                     case .starships:
                         guard let starship = self.starship else { return }
-//                        let galacticCredits = ConversionMethod().galacticWithCommas(from: starship.costInCredits)
                         let galacticCredits = ConversionMethod().addCommas(to: starship.costInCredits)
                         self.costOrHomeLabel.text = galacticCredits
                     case .vehicles:
                         guard let vehicle = self.vehicle else { return }
-//                        let galacticCredits = ConversionMethod().galacticWithCommas(from: vehicle.costInCredits)
                         let galacticCredits = ConversionMethod().addCommas(to: vehicle.costInCredits)
                         self.costOrHomeLabel.text = galacticCredits
                     default: return

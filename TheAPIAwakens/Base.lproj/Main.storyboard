@@ -264,7 +264,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <state key="normal" title="Change Exchange Rate"/>
                                 <connections>
-                                    <action selector="changeExchangeRate:" destination="kza-ZD-zmz" eventType="touchUpInside" id="ayc-GC-xTq"/>
                                     <segue destination="APN-em-ygi" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="7Lw-5J-I74"/>
                                 </connections>
                             </button>

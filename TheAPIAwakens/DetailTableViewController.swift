@@ -107,6 +107,7 @@ class DetailTableViewController: UITableViewController {
         if selectedType == .characters { self.currencySegmentedController.isHidden = true }
     }
     
+    // Default title labels set for Vehicles/Starchips.
     func setTitleLabels() {
         guard let selectedType = self.selectedType else { return }
         switch selectedType {
@@ -120,6 +121,7 @@ class DetailTableViewController: UITableViewController {
         }
     }
     
+    // Display data of currently selected object
     func displayData(from notification: Notification, with selectedType: StarWarsTypes ) {
         switch selectedType {
             case .characters:
@@ -183,7 +185,7 @@ class DetailTableViewController: UITableViewController {
         }
     }
     
-    
+    // Get characters home planet
     func getPlanet(withURL url: String ) -> String {
         let filteredArray = self.planets.filter({ planet -> Bool in
             planet.url.lowercased().contains(url)
@@ -230,7 +232,7 @@ class DetailTableViewController: UITableViewController {
         return starshipString
     }
     
-    // Create string from array of objects
+    // Create string from array of objects. Used for Starships/Vehicles unique to character
     func display(arrayOfStrings: [String]) -> String{
         if arrayOfStrings.isEmpty {
             return "unknown"
@@ -251,7 +253,7 @@ class DetailTableViewController: UITableViewController {
     
     
 // MARK: Actions
-    
+    // Convert currency
     @IBAction func currencySegmentChanged(_ sender: Any) {
         guard let selectedType = self.selectedType else { return }
         let currentIndex = currencySegmentedController.selectedSegmentIndex
@@ -284,6 +286,7 @@ class DetailTableViewController: UITableViewController {
         }
     }
     
+    // Convert measurement
     @IBAction func measurementSegmentChanged(_ sender: Any) {
         guard let selectedType = self.selectedType else { return }
         let currentIndex = measurementSegmentedController.selectedSegmentIndex

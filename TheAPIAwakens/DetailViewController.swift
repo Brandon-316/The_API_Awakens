@@ -54,6 +54,7 @@ class DetailViewController: UIViewController {
         self.pickerViewAnimation()
     }
     
+    // Send data to TableViewController embedded inside of the ContainerView
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detailTableViewSegue" {
             let destinationTableVC = segue.destination as! DetailTableViewController
@@ -123,6 +124,7 @@ class DetailViewController: UIViewController {
                     character.height.lowercased() != "unknown"
                 })
                 for character in newArray {
+                    // Some measurements returned from API include commas but most do not. Removing them in order to allow accurate sorting for defining smallest/largest.
                     character.height = character.height.replacingOccurrences(of: ",", with: "")
                 }
                 let sorted = newArray.sorted {$0.height.localizedStandardCompare($1.height) == .orderedAscending}
@@ -155,11 +157,7 @@ class DetailViewController: UIViewController {
         }
     }
     
-    // Some measurements returned from API include commas but most do not. Removing them in order to allow accurate sorting for defining smallest/largest.
-    func removeCommas() {
-        
-    }
-    
+    // Handle animation using 'Spring'
     func pickerViewAnimation() {
         let extendedConstant: CGFloat = pickerView.frame.height + pickerViewToggleBtn.frame.height
         
@@ -181,17 +179,9 @@ class DetailViewController: UIViewController {
     }
     
     
-    
-    
 // MARK: Actions
-    
-    
     @IBAction func dismiss(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func changeExchangeRate(_ sender: Any) {
-        
     }
     
     @IBAction func togglePickerView(_ sender: Any) {

@@ -33,11 +33,13 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.activityIndicator.startAnimating()
+        // Download JSON data
         JSONDownloader().downloadJSON(for: .characters)
         JSONDownloader().downloadJSON(for: .starships)
         JSONDownloader().downloadJSON(for: .vehicles)
         JSONDownloader().downloadJSON(for: .planets)
         
+        // Observers
         NotificationCenter.default.addObserver(forName: NSNotifications().jsonCharacterRequestDidComplete, object: nil, queue: nil){ notification in
             let contents = notification.object as! [Character]
             self.characters.append(contentsOf: contents)
@@ -99,13 +101,8 @@ class HomeViewController: UIViewController {
     }
     
 // MARK: Methods
+    // Check if all JSON data has been recieved
     func checkDownloads() {
-//        let arrayOfObjects: [[Any]] = [characters, starships, vehicles, planets]
-//        for array in arrayOfObjects {
-//            if array.count == 0 {
-//                return
-//            }
-//        }
         if self.packagesReceived != 4 {
             return
         }
